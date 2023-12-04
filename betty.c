@@ -1,12 +1,13 @@
-#include <stdio.h>
+#include "main.h"
 
 
 /**
- * main - Print out to the screen "hello betty".
+ * betty - Print out to the screen "hello betty".
  *
  * Return: void
 */
-int main(void)
+int betty(void)
 {
 	printf("hello betty");
+	return (0);
 }

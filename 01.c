@@ -1,9 +1,4 @@
-#include <unistd.h>
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <sys/types.h>
-#include <sys/wait.h>
+#include "main.h"
 
 
 /**
@@ -13,16 +8,15 @@
  */
 int main(void)
 {
-	int status;
+	int exit_code;
 
 	while (1)
 	{
 		pid_t id = fork();
-		char *line = NULL, *tok;
+		char *line = NULL, *tok, **argv = malloc(sizeof(char *));
 		size_t n = 0;
 		ssize_t the_getline;
 		int i = 0;
-		char **argv = malloc(sizeof(char *));
 
 		if (id == 0)
 		{
@@ -32,7 +26,8 @@ int main(void)
 			{
 				printf("Exiting shell...\n");
 				free(line);
-				exit(-5);
+				free(argv);
+				exit(4);
 			}
 			tok = strtok(line, " \n");
 			while (tok)
@@ -47,7 +42,9 @@ int main(void)
 		}
 		else
 		{
-			wait(&status);
+			wait(&exit_code);
+			if (WEXITSTATUS(exit_code) == 4)
+				exit(4);
 		}
 	}
 	return (0);
