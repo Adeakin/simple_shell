@@ -20,13 +20,12 @@ int main(void)
 
 		if (id == 0)
 		{
-			printf(">> ");
+			_printf(">> ");
 			the_getline = getline(&line, &n, stdin);
 			if (the_getline == -1)
 			{
-				printf("Exiting shell...\n");
+				_printf("Exiting shell...\n");
 				free(line);
-				free(argv);
 				exit(4);
 			}
 			tok = strtok(line, " \n");
