@@ -18,6 +18,6 @@ int dixX_check(char suspect, char *list);
 
 
 int betty(void);
-
+char **tokenisation(*line, *delimeter);
 
 #endif

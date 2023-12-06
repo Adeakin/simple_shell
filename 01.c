@@ -28,15 +28,10 @@ int main(void)
 				free(line);
 				exit(4);
 			}
-			tok = strtok(line, " \n");
-			while (tok)
-			{
-				argv[i] = tok;
-				tok = strtok(NULL, " \n");
-				i++;
-			}
-			argv[i] = NULL;
-			execve(argv[0], argv, NULL);
+
+			char **tokenised = tokenisation(line, " \t\n");		
+			
+			execve(tokenised[0], tokenised, NULL);
 			perror("Execv failed: ");
 		}
 		else
