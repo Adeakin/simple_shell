@@ -98,7 +98,7 @@ void str_handler(char *str, int *counter)
 
 
 /**
- * print_digit - Solve the printing of dec or hex according to the base argument
+ * print_digit - Solve the printing of dec or hex according on base argument
  * @num: The number to be parsed
  * @format: The format to consider when parsing the num
  * @counter: The pointer to the counter address
