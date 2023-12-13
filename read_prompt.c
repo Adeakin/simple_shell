@@ -2,15 +2,16 @@
 
 
 /**
- * read_and_tokenise - read the input and return the tokenised input.
+ * read_and_tokenise - Read and tokenis the input.
  *
- * Return: A pointer to pointer to tokenised input.
+ * Return: Tokenised input packed into a double pointer.
  */
 char **read_and_tokenise()
 {
 	char *buffer = NULL;
 	size_t buffer_size = 0;
-	ssize_t read_length;	
+	ssize_t read_length;
+
 	read_length = getline(&buffer, &buffer_size, stdin);
 	if (read_length == -1)
 	{

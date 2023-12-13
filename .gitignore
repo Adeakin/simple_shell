@@ -1,3 +1,17 @@
-exe*
-.*swp
+# Handle vi auto-recovery generated files
+*.swp
+*.swo
+
+
+# Handle valgrind generated files
+
+valgrind.log
+vgcore.*
+suppressions
+
+
+# Ignore compiled files
+
 hsh
+*.o
+*.out
