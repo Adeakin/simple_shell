@@ -1,6 +1,6 @@
 #SIMPLE SHELL PROJECT
 
-We creating a custom made shell environment. 
+We creating a custom made shell environment.
 
 At the end of this project, we were able to achieve the following aims:
 
