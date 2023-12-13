@@ -16,7 +16,7 @@ char **execute_prompt(char **argv)
 	init_path = pather(path_value, argv[0]);
 	if (init_path == NULL)
 	{
-		perror("Command doesn’t exist");
+		perror("./hsh");
 		free(init_path);
 		return (argv);
 	}
