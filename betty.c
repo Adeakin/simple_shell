@@ -8,6 +8,6 @@
 */
 int betty(void)
 {
-	printf("hello betty");
+	_printf("hello betty");
 	return (0);
 }
