@@ -8,5 +8,6 @@
  */
 void print_prompt(void)
 {
-	_printf(">> ");
+	pid_t id = getpid();
+	_printf(">> %d: ", id);
 }
