@@ -1,4 +1,4 @@
-#SIMPLE SHELL PROJECT
+# SIMPLE SHELL PROJECT
 
 We creating a custom made shell environment.
 
