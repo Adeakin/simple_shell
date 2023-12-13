@@ -21,7 +21,7 @@ int dixX_check(char suspect, char *list);
 
 
 /* For simple_shell */
-void print_prompt();
+void print_prompt(void);
 char **read_and_tokenise();
 char **tokenise_prompt(char *str, char *delimeter);
 char **execute_prompt(char **argv);
