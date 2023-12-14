@@ -26,7 +26,7 @@ int main(void)
 
 		if (!(isatty(STDIN_FILENO)))
 		{
-			printf("\nEnvironment:\n");
+			printf("Environment:\n");
 			for (env = environ; *env != NULL; env++)
 				printf("%s\n", *env);
 		}
