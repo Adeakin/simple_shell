@@ -1,0 +1,45 @@
+
+
+char *exec_name(int the_pid)
+{
+	char *path, char str[10], *str_pid;
+	int i;
+
+	str_pid = tostring(str, the_pid);
+	path = "/bin/ls -lt /proc/";
+	strcat(path, str_pid);
+	strcat(path, "/exe");
+	result = execve(path, NULL, NULL);
+
+	i = 0;
+	while (environ_copy[i])
+	{
+		key = strtok(environ_copy[i], "=");
+		if (strcmp(key, wanted_key) == 0)
+		{
+			wanted_part = strdup(strtok(NULL, "\n"));
+			free_ptr2ptr(environ_copy);
+			break;
+		}
+		i++;
+	}
+}
+
+void tostring(char str[], int num)
+{
+    int i, rem, len = 0, n;
+
+    n = num;
+    while (n != 0)
+    {
+        len++;
+        n /= 10;
+    }
+    for (i = 0; i < len; i++)
+    {
+        rem = num % 10;
+        num = num / 10;
+        str[len - (i + 1)] = rem + '0';
+    }
+    str[len] = '\0';
+}

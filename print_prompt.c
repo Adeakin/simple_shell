@@ -8,5 +8,6 @@
  */
 void print_prompt(void)
 {
-	_printf(">> ");
+	if (isatty(STDIN_FILENO))
+		_printf(">> ");
 }

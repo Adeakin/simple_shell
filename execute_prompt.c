@@ -27,6 +27,7 @@ char **execute_prompt(char **argv)
 		argv[0] = init_path;
 		execve(argv[0], argv, environ);
 		perror("Failed to execute");
+		_exit(EXIT_FAILURE);
 	}
 	else if (child == -1)
 	{

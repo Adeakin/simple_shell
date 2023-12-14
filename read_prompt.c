@@ -16,7 +16,7 @@ char **read_and_tokenise()
 	if (read_length == -1)
 	{
 		free(buffer);
-		exit(EXIT_FAILURE);
+		exit(0);
 	}
 	if (read_length == 1)
 		return (NULL);
