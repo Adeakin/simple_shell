@@ -11,7 +11,7 @@ int main(void)
 {
 	while (1)
 	{
-		char **argv, **tokenised, **env;
+		char **argv, **tokenised/*, **env*/;
 
 		print_prompt();
 
@@ -24,12 +24,12 @@ int main(void)
 
 		free_ptr2ptr(argv);
 
-		if (!(isatty(STDIN_FILENO)))
+		/*if (!(isatty(STDIN_FILENO)))
 		{
 			printf("Environment:\n");
 			for (env = environ; *env != NULL; env++)
 				printf("%s\n", *env);
-		}
+		}*/
 	}
 
 	return (0);
